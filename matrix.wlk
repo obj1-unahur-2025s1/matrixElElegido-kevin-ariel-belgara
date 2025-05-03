@@ -7,7 +7,7 @@ object nave{
         return self.pasajeroDeMayorVitalidad().vitalidad() < self.pasajeroDeMenorVitalidad() *2
     }
     method pasajeroDeMenorVitalidad()= pasajeros.min({p => p.vitalidad()})
-    method estaElElegido()= pasajeros.any({p => p.vitalidad()})
+    method estaElElegido()= pasajeros.any({p => p.esElElegido()})
     method chocar(){
         pasajeros.forEach({p => p.saltar()})
         pasajeros.clear()
